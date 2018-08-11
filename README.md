@@ -2,6 +2,8 @@
 
 This tool is a simple updater for [Ark Smart Breeding](https://github.com/cadon/ARKStatsExtractor).
 
+**Note:** the updater requires Python 3.5 installed to function properly.
+
 ## Useage
 
 To use the tool, download the [latest release](https://github.com/DelilahEve/asb-updater/releases) and unzip it into your ASB folder.
