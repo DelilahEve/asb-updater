@@ -98,7 +98,9 @@ class Updater:
 			if os.path.exists(f):
 				os.remove(f)
 
-if loaded:
+if not loaded:
+	input('Press Enter to exit')
+else:
 	try:
 		u = Updater()
 		loop = asyncio.get_event_loop()
