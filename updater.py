@@ -1,17 +1,25 @@
 # Author: DelilahEve
 
+import json
+import zipfile
+import traceback
+import os
+
 loaded = True
 try:
-	import json
 	import aiohttp
-	import asyncio
-	import aiofiles
-	import zipfile
-	import traceback
-	import os
 except:
-	print('A required module is missing')
-	input('Press Enter to exit')
+	print('module aiohttp is missing')
+	loaded = False
+try:
+	import asyncio
+except:
+	print('module asyncio is missing')
+	loaded = False
+try:
+	import aiofiles
+except:
+	print('module aiofiles is missing')
 	loaded = False
 
 owner = 'cadon'
