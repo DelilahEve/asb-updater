@@ -63,8 +63,9 @@ class Updater:
 	
 	async def fetch(self):
 		contents = None
-		async with aiohttp.get(self.url) as response:
-			contents = await response.text()
+		async with aiohttp.ClientSession() as session:
+			async with session.get(self.url) as response:
+				contents = await response.text()
 		
 		cacheFile = open('temp.json', 'w')
 		cacheFile.write(contents)
