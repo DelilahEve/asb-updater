@@ -19,3 +19,11 @@ Run `update.bat` by double clicking
 **Mac/Linux**
 
 Run `update.sh` from the terminal. (typically `./update.sh`)
+
+## Error when running?
+
+If you recieve errors when attempting to use the tool, here are some tips:
+
+- Update pip with `pip install --upgrade pip`
+
+- Ensure python 3.5 is installed and being used for this tool
