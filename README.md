@@ -8,11 +8,11 @@ This tool is a simple updater for [Ark Smart Breeding](https://github.com/cadon/
 
 To use the tool, download the [latest release](https://github.com/DelilahEve/asb-updater/releases) 
 
-#### .exe useage:
+### .exe useage:
 
 Place `asb-updater.exe` in your ASB folder, and double click whenever an update is needed.
 
-#### .zip useage:
+### .zip useage:
 
 Unzip the contents of `asb-updater.zip` into your ASB folder.
 
