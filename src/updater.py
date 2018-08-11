@@ -4,6 +4,7 @@ import json
 import zipfile
 import traceback
 import os
+import sys
 
 loaded = True
 try:
@@ -24,23 +25,22 @@ except:
 
 owner = 'cadon'
 repo = 'ARKStatsExtractor'
+asb = 'ARK Smart Breeding.exe'
 
 releasesURL = 'https://api.github.com/repos/{0}/{1}/releases'
 
 tempZipName = 'ASB_Update_{0}.temp.zip'
 
+flagRunASB = '-r'
+flagAuto = '-a'
+
 class Updater:
 	
-	def __init__(self):
+	def __init__(self, args):
 		self.url = releasesURL.format(owner, repo)
 		
-		self.is_started = False
-		self._task = None
-		
-	async def start(self):
-		if not self.is_started:
-			self.is_started = True
-			self._task = asyncio.ensure_future(self._run())
+		self.startASB = flagRunASB in args
+		self.autoMode = flagAuto in args
 		
 	async def run(self):
 		print('Fetching releases data.')
@@ -59,7 +59,11 @@ class Updater:
 		self.cleanup()
 		
 		print('Update complete!')
-		input('Press Enter to exit')
+		if not self.autoMode:
+			input('Press Enter to exit')
+			
+		if self.startASB:
+			os.startfile(asb)
 	
 	async def fetch(self):
 		contents = None
@@ -102,7 +106,7 @@ if not loaded:
 	input('Press Enter to exit')
 else:
 	try:
-		u = Updater()
+		u = Updater(sys.argv[1:])
 		loop = asyncio.get_event_loop()
 		loop.run_until_complete(u.run())
 	except Exception:
