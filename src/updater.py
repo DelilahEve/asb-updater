@@ -103,13 +103,15 @@ class Updater:
 				os.remove(f)
 
 if not loaded:
-	input('Press Enter to exit')
+	if flagAuto not in sys.argv[1:]:
+		input('Press Enter to exit')
 else:
-	try:
+	try:	
 		u = Updater(sys.argv[1:])
 		loop = asyncio.get_event_loop()
 		loop.run_until_complete(u.run())
 	except Exception:
-		print('========================\nError\n========================')
-		print(traceback.format_exc())
-		input('Press Enter to exit')
+		if flagAuto not in sys.argv[1:]:
+			print('========================\nError\n========================')
+			print(traceback.format_exc())
+			input('Press Enter to exit')

@@ -28,6 +28,11 @@ Run `update.bat` by double clicking
 
 Run `update.sh` from the terminal. (typically `./update.sh`)
 
+## Optional Runtime Parameters
+
+* `-r` - Runs ASB after performing the update
+* `-a` - Suppresses user prompts
+
 ## Error when running?
 
 If you recieve errors when attempting to use the tool, here are some tips:
