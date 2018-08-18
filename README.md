@@ -2,7 +2,7 @@
 
 This tool is a simple updater for [Ark Smart Breeding](https://github.com/cadon/ARKStatsExtractor).
 
-**Note:** the updater requires Python 3.5 installed to function properly.
+**Note:** the zip version requires Python 3.5 installed to function properly.
 
 ## Useage
 
@@ -28,12 +28,12 @@ Run `update.bat` by double clicking
 
 Run `update.sh` from the terminal. (typically `./update.sh`)
 
-## Optional Runtime Parameters
+## Optional Runtime Parameters (Python Only)
 
 * `-r` - Runs ASB after performing the update
 * `-a` - Suppresses user prompts
 
-## Error when running?
+## Error when running (Python)?
 
 If you recieve errors when attempting to use the tool, here are some tips:
 
