@@ -3,3 +3,8 @@ build/
 dist/
 *.spec
 package.sh
+src/c#/ASB Updater/packages/
+src/c#/ASB Updater/.vs/
+src/c#/ASB Updater/ASB Updater.sln
+src/c#/ASB Updater/ASB Updater/bin/
+src/c#/ASB Updater/ASB Updater/obj/
